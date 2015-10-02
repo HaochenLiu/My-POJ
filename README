@@ -5,3 +5,4 @@ POJ的代码风格很竞赛。主要体现在牺牲了可读性和容错性，�
 2. RE的结果，也有可能是栈溢出导致。
 3. 大块内存，尽量动态分配。否则可能导致RE。
 4. 不支持unordered_map。
+5. struct的constructor需要对每一个argument有默认输入值。
