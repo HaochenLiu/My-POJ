@@ -2,6 +2,7 @@
 经典滑雪题
 最长路径
 DFS
+排序后，从低到高搜索。
 */
 
 #include <algorithm>
