@@ -25,6 +25,14 @@
 
 using namespace std;
 
+template<class T> inline T pow(T x, int n) {
+    T count = 1;
+    for(int i = 0; i < n; i++) {
+        count *= x;
+    }
+    return count;
+}
+
 int solve(string s) {
     int count = 0;
     for(int i = 0; i < 8; i++) {
