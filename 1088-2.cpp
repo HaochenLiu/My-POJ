@@ -1,3 +1,10 @@
+/*
+经典滑雪题
+最长路径
+DFS
+排序后，从低到高搜索。
+*/
+
 #include <algorithm>
 #include <bitset>
 #include <cctype>
@@ -29,12 +36,6 @@ int max(int a, int b) {
     if(a > b) return a;
     return b;
 }
-
-/*
-经典滑雪题
-最长路径
-DFS
-*/
 
 int dx[4] = {1, 0, -1, 0};
 int dy[4] = {0, 1, 0, -1};
