@@ -25,7 +25,7 @@
 
 using namespace std;
 
-char a[1000000];
+char* a;
 
 bool test(int per) {
     int len = strlen(a);
@@ -52,6 +52,7 @@ int solve() {
 }
 
 int main() {
+    a = new char[1000000];
     while(true) {
         scanf("%s", a);
         if(strlen(a) == 1 && a[0] == '.') {
