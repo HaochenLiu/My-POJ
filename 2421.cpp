@@ -1,3 +1,8 @@
+/*
+最小生成树
+并查集
+*/
+
 #include <algorithm>
 #include <bitset>
 #include <cctype>
