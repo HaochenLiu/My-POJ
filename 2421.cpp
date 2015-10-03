@@ -1,6 +1,7 @@
 /*
 Kruskal's algorithm
 Minimum spanning tree
+union find
 最小生成树
 并查集
 
