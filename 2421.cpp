@@ -1,4 +1,5 @@
 /*
+Kruskal's algorithm
 最小生成树
 并查集
 */
