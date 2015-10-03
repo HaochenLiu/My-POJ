@@ -7,3 +7,4 @@ POJ的代码风格很竞赛。主要体现在牺牲了可读性和容错性，�
 4. 不支持unordered_map。可以自己实现hash table或者用map代替。
 5. struct的constructor需要对每一个argument有默认输入值。
 6. 解图论问题时，经常可以构造一个包含题目所给graph的supergraph，再解决。比如1237，不妨假设图中有26个vertices，但有些字母没有edge。问题就得到简化了。
+7. vector的resize，并不是reset。最好先clear，再resize。
