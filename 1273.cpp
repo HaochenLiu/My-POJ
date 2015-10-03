@@ -6,16 +6,15 @@
 
 using namespace std;
 
-const int maxn = 202;
-const int inf = 0x3f3f3f3f;
+const int maxn = 201;
 
 int mp[maxn][maxn];
 bool vis[maxn];
 int pre[maxn];
 int n;
 int m;
-int s;
-int e;
+int source;
+int sink;
 
 int max(int a, int b) {
     if(a > b) return a;
@@ -29,20 +28,20 @@ int min(int a, int b) {
 
 bool bfs() {
     queue<int> q;
-    memset(vis, 0, sizeof(vis));
-    vis[s] = 1;
-    q.push(s);
+    memset(vis, false, sizeof(vis));
+    vis[source] = true;
+    q.push(source);
     while(!q.empty()) {
-        int first = q.front();
-        if(first == e) {
+        int cur = q.front();
+        if(cur == sink) {
             return true;
         }
         q.pop();
         for(int i = 1;i <= n; i++) {
-            if(!vis[i] && mp[first][i]) {
+            if(!vis[i] && mp[cur][i]) {
+                vis[i] = true;
+                pre[i] = cur;
                 q.push(i);
-                vis[i] = 1;
-                pre[i] = first;
             }
         }
     }
@@ -50,35 +49,35 @@ bool bfs() {
 }
 
 int max_flow() {
-    int ans = 0;
+    int res = 0;
     while(true) {
         if(!bfs()) {
-            return ans;
+            return res;
         }
-        int Min = inf;
-        for(int i = e; i != s; i = pre[i]) {
-            Min = min(Min, mp[pre[i]][i]);
+        int minVal = INT_MAX;
+        for(int i = sink; i != source; i = pre[i]) {
+            minVal = min(minVal, mp[pre[i]][i]);
         }
-        for(int i = e; i != s; i = pre[i]) {
-            mp[pre[i]][i] -= Min;
-            mp[i][pre[i]] += Min;
+        for(int i = sink; i != source; i = pre[i]) {
+            mp[i][pre[i]] += minVal;
+            mp[pre[i]][i] -= minVal;
         }
-        ans += Min;
+        res += minVal;
     }
 }
 
 int main() {
     while(scanf("%d%d", &m, &n) != EOF) {
         memset(mp, 0, sizeof(mp));
-        int u;
-        int v;
+        int x;
+        int y;
         int c;
         while(m--) {
-            scanf("%d%d%d", &u, &v, &c);
-            mp[u][v] += c;
+            scanf("%d%d%d", &x, &y, &c);
+            mp[x][y] += c;
         }
-        s = 1;
-        e = n;
+        source = 1;
+        sink = n;
         printf("%d\n", max_flow());
     }
     return 0;
