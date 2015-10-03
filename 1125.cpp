@@ -1,3 +1,7 @@
+/*
+Dijkstra's algorithm
+*/
+
 #include <algorithm>
 #include <bitset>
 #include <cctype>
