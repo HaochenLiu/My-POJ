@@ -1,3 +1,8 @@
+/*
+Dijkstra's algorithm
+Eulerian path
+*/
+
 #include <algorithm>
 #include <bitset>
 #include <cctype>
