@@ -2,6 +2,8 @@
 Kruskal's algorithm
 最小生成树
 并查集
+
+因为已经给定了一些edge，此题Prim's algorithm不适用。
 */
 
 #include <algorithm>
