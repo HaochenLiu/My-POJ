@@ -1,3 +1,7 @@
+/*
+Edmonds–Karp algorithm
+*/
+
 #include <iostream>
 #include <algorithm>
 #include <stdio.h>
