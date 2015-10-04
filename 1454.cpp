@@ -56,7 +56,7 @@ bignum operator/(bignum x, int y);
 bignum operator/(int x, bignum y);
 bignum operator&(bignum x, int y);
 bignum sqrt(bignum n);
-bool isSquare(int n);
+bool isSquare(bignum n);
 void simplify(bignum& x);
 bignum max(bignum x, bignum y);
 bignum min(bignum x, bignum y);
