@@ -67,6 +67,7 @@ bignum stobignum(string str);
 string bignumtos(bignum num);
 int getDigitCnt(bignum num);
 int getDigitSum(bignum num);
+bignum fac(int n);
 long long gcd(long long a, long long b);
 long long lcm(long long a, long long b);
 
