@@ -953,7 +953,7 @@ int main() {
         string base;
         cin>>base;
         string res;
-        if(from == to) {
+        if(from == to || base == "0") {
             res = base;
         } else {
             int n = base.size();
@@ -967,12 +967,7 @@ int main() {
                 res.push_back(num2c(bignum2ll(a % to)));
                 a /= to;
             }
-
-            if(res.size() != 0) {
-                reverse(res.begin(), res.end());
-            } else {
-                res = "0";
-            }
+            reverse(res.begin(), res.end());
         }
         cout<<from<<" "<<base<<endl;
         cout<<to<<" "<<res<<endl;
