@@ -1,3 +1,8 @@
+/*
+测试数据
+http://www.informatik.uni-ulm.de/acm/Locals/2000/input/
+*/
+
 #include <algorithm>
 #include <bitset>
 #include <cctype>
