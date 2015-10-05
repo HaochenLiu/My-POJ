@@ -29,33 +29,6 @@ http://acmgnyr.org/year2002/problems.shtml
 
 using namespace std;
 
-#include <algorithm>
-#include <bitset>
-#include <cctype>
-#include <cmath>
-#include <cstdlib>
-#include <cstring>
-#include <cstdio>
-#include <ctime>
-#include <deque>
-#include <fstream>
-#include <functional>
-#include <iostream>
-#include <iomanip>
-#include <list>
-#include <map>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <string>
-#include <stack>
-#include <sstream>
-#include <string.h>
-#include <utility>
-#include <vector>
-
-using namespace std;
-
 int max(int a, int b) {
     if(a > b) return a;
     return b;
