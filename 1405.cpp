@@ -22,6 +22,7 @@ void copy() {
     }
     len1 = len3;
 }
+
 void multiply() {
     int i, j;
     setAns();
