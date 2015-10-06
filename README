@@ -47,6 +47,7 @@ POJ 1000题。
 经常参加OJ比赛，名列前茅。
 
 9. 碰到死也看不出来的bug时（多半是0这种corner case），就找题目出处。一般比赛过后，测试数据会公布，可以有针对性地debug。
+10. 不要重新造轮子！不要重新造轮子！不要重新造轮子！人家有的东西，直接用就好了嘛！
 
 bipartite graph
 http://www.cnblogs.com/pony1993/archive/2012/07/25/2607738.html
