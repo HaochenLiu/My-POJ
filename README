@@ -49,11 +49,15 @@ POJ 1000题。
 9. 碰到死也看不出来的bug时（多半是0这种corner case），就找题目出处。一般比赛过后，测试数据会公布，可以有针对性地debug。
 10. 不要重新造轮子！不要重新造轮子！不要重新造轮子！人家有的东西，直接理解的基础上运用就好了嘛！不重要的东西，没必要自己写一遍！
 
-bipartite graph
-http://www.cnblogs.com/pony1993/archive/2012/07/25/2607738.html
-
 ACRush模板
 1003
 
 bignum模板最新版
 release 1220
+
+Link:
+bipartite graph
+http://www.cnblogs.com/pony1993/archive/2012/07/25/2607738.html
+
+Example: 
+http://www.sanfoundry.com/
