@@ -1,7 +1,6 @@
 /*
 经典滑雪题
 最长路径
-DFS
 排序后，从低到高搜索。
 */
 
@@ -52,23 +51,6 @@ bool inBound(int x, int y, int R, int C) {
     return (x >= 0) && (x < R) && (y >= 0) && (y < C);
 }
 
-int dfs(int** dp, int** h, int x, int y, int R, int C) {
-    if(dp[x][y] > 1) return dp[x][y];
-
-    for(int i = 0; i < 4; i++) {
-        int nx = x + dx[i];
-        int ny = y + dy[i];
-        if(!inBound(nx, ny, R, C)) continue;
-        if(h[nx][ny] >= h[x][y]) continue;
-        dp[x][y] = max(dp[x][y], dfs(dp, h, nx, ny, R, C) + 1);
-    }
-    return dp[x][y];
-}
-
-bool comp(Point a, Point b) {
-    return (h[a.x][a.y] < h[b.x][b.y]);
-}
-
 int main() {
     int R;
     int C;
@@ -111,9 +93,16 @@ int main() {
 
         int maxVal = 0;
         for(int i = 0; i < R * C; i++) {
-            int nx = p[i].x;
-            int ny = p[i].y;
-            maxVal = max(maxVal, dfs(dp, h, nx, ny, R, C));
+            int x = p[i].x;
+            int y = p[i].y;
+            for(int j = 0; j < 4; j++) {
+                int nx = x + dx[j];
+                int ny = y + dy[j];
+                if(!inBound(nx, ny, R, C)) continue;
+                if(h[nx][ny] >= h[x][y]) continue;
+                dp[x][y] = max(dp[x][y], dp[nx][ny] + 1);
+            }
+            maxVal = max(maxVal, dp[x][y]);
         }
 
         cout<<maxVal<<endl;
