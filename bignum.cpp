@@ -919,25 +919,80 @@ int c2num(char c) {
  *===========================================
  */
 
-bool testBigNumEqualsToZero() {
+bool testZeroEqualsToZero() {
 	bignum a = 0;
     return (a == 0);
 }
 
-bool testBigNumGreaterThanZero() {
+bool testPositiveNumNotEqualsToZero_1() {
+	bignum a = 1;
+    return !(a == 0);
+}
+
+bool testPositiveNumNotEqualsToZero_2() {
+	bignum a = 100000000;
+    return !(a == 0);
+}
+
+bool testNegativeNumNotEqualsToZero_1() {
+	bignum a = -1;
+    return !(a == 0);
+}
+
+bool testNegativeNumNotEqualsToZero_2() {
+	bignum a = -100000000;
+    return !(a == 0);
+}
+
+bool testZeroNotGreaterThanZero() {
+	bignum a = 0;
+    return !(a > 0);
+}
+
+bool testPositiveNumGreaterThanZero_1() {
 	bignum a = 1;
     return (a > 0);
 }
 
-bool test() {
-	if(!testBigNumEqualsToZero) {
-		cout<<"testBigNumEqualsToZero failed."<<endl;
+bool testPositiveNumGreaterThanZero_2() {
+	bignum a = 100000000;
+    return (a > 0);
+}
+
+void test() {
+	if(!testZeroEqualsToZero()) {
+		cout<<"testZeroEqualsToZero failed."<<endl;
+		return;
 	}
-	if(!testBigNumGreaterThanZero) {
-		cout<<"testBigNumGreaterThanZero failed."<<endl;
+	if(!testPositiveNumNotEqualsToZero_1()) {
+		cout<<"testPositiveNumNotEqualsToZero_1 failed."<<endl;
+		return;
+	}
+	if(!testPositiveNumNotEqualsToZero_2()) {
+		cout<<"testPositiveNumNotEqualsToZero_2 failed."<<endl;
+		return;
+	}
+	if(!testNegativeNumNotEqualsToZero_1()) {
+		cout<<"testNegativeNumNotEqualsToZero_1 failed."<<endl;
+		return;
+	}
+	if(!testNegativeNumNotEqualsToZero_2()) {
+		cout<<"testNegativeNumNotEqualsToZero_2 failed."<<endl;
+		return;
+	}
+	if(!testZeroNotGreaterThanZero()) {
+		cout<<"testZeroNotGreaterThanZero failed."<<endl;
+		return;
+	}
+	if(!testPositiveNumGreaterThanZero_1()) {
+		cout<<"testPositiveNumGreaterThanZero_1 failed."<<endl;
+		return;
+	}
+	if(!testPositiveNumGreaterThanZero_2()) {
+		cout<<"testPositiveNumGreaterThanZero_2 failed."<<endl;
+		return;
 	}
 	cout<<"Test passed."<<endl;
-    return true;
 }
 
 int main() {
